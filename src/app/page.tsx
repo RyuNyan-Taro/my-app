@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { calculateTax } from "./test_logic/calculate_tax";
-import ChatForm from "./components/chat/ChatForm";
-import ChatMessage from "./components/chat/ChatMessage";
+import { ChatForm } from "./components/chat/ChatForm";
+import { ChatMessage } from "./components/chat/ChatMessage";
 
 export default function Home() {
   const price = 20
