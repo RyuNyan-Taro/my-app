@@ -3,6 +3,8 @@
 import { ChangeEvent, KeyboardEvent, useState } from "react";
 import { useAtom } from "jotai";
 import { sendMessageAtom } from "@/app/common/store/chat/chat";
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
 
 export const ChatForm: React.FC = () => {
   const [message, setMessage] = useState<string>("");  // 入力ボックスのテキストを保持
@@ -63,21 +65,20 @@ export const ChatForm: React.FC = () => {
             }
           }}
         />
-        <button
-          style={{
-            padding: 10,
-            background: "#006BD6",
-            color: "white",
-            borderRadius: 10,
-            border: "none",
-            width: "5%",
-          }}
-          onClick={() => {
-            sendMessage();
-          }}
+        <Button
+            style={{
+                width: "5.1%"
+            }}  
+            size="small"
+            variant="contained" 
+            color="success"
+            endIcon={<SendIcon />}
+            onClick={() => {
+                sendMessage();
+            }}
         >
-          送信
-        </button>
+          Send
+        </Button>
       </div>
     </div>
   );
