@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEvent, KeyboardEvent, useState } from "react";
+import { useState } from "react";
 import { useAtom } from "jotai";
 import { sendMessageAtom } from "@/app/common/store/chat/chat";
 import Button from '@mui/material/Button';
@@ -14,7 +14,7 @@ export const ChatForm: React.FC = () => {
     if (!message) return;
 
     try {
-      const response = await fetch("/api/chat", {
+      await fetch("/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -25,7 +25,6 @@ export const ChatForm: React.FC = () => {
         }),
       });
 
-      const data = await response.json();
       setSender(true);  // これでユーザーが送信したというアクションをChatMessageに伝える
     } catch (err) {
       console.error(err);

@@ -1,6 +1,6 @@
 import { NextResponse, NextRequest } from "next/server";
 
-let chatMessages = [
+const chatMessages = [
     {
         id: 1,
         role: "bot", 
