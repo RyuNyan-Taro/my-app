@@ -45,7 +45,7 @@ export const ChatForm: React.FC = () => {
       <div style={{ display: "flex", gap: 10 }}>
         <input
           style={{
-            width: "100%",
+            width: "90%",
             padding: 10,
             borderRadius: 10,
             border: "1px solid #ccc",
@@ -70,6 +70,7 @@ export const ChatForm: React.FC = () => {
             color: "white",
             borderRadius: 10,
             border: "none",
+            width: "5%",
           }}
           onClick={() => {
             sendMessage();
