@@ -1,4 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+top url: https://nyantaro-chat-demo-test.vercel.app
+build by [vercel](https://vercel.com)
 
 It is hanson of [Zenn](https://zenn.dev/umi_mori/books/next-js-typescript)
 
